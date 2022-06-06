@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "68fd6082-35e6-4b8c-ad95-bc854526229e",
+		"name": "Banco Pichincha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AsignacionClientePatio",
+			"item": [
+				{
+					"name": "Editar Patio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"acIdentificacionCliente\": \"0604434970\",\r\n  \"acIdPatio\": 1,\r\n  \"acFechaCreacion\": \"2022-06-05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:64393/api/PatioAutos/PatioAutos",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAutos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CargaInicial",
+			"item": [
+				{
+					"name": "Clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Home/CargarDatosIniciales/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Home",
+								"CargarDatosIniciales",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ejecutivos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Home/CargarDatosIniciales/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Home",
+								"CargarDatosIniciales",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Marcas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Home/CargarDatosIniciales/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Home",
+								"CargarDatosIniciales",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Solicitud credito",
+			"item": [
+				{
+					"name": "Solicitud",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"scIdentificacionCliente\": \"0604434970\",\r\n\"scPatio\": 1,\r\n\"scVehiculo\": 4,\r\n\"scMesesPlazo\": 10,\r\n\"scCuotas\": 1000,\r\n\"scEntrada\": 500.0000,\r\n\"scIdentificacionEjecutivo\": \"0604434571\",\r\n\"scObservacion\": \"Ninguna\",\r\n\"scEstado\": 1  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/SolicitudCreditos/SolicitudCredito",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"SolicitudCreditos",
+								"SolicitudCredito"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Solicitudes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/SolicitudCreditos/SolicitudCreditos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"SolicitudCreditos",
+								"SolicitudCreditos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Cliente",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Clientes/Clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Clientes",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clIdentificacion\": \"0604434970\",\r\n    \"clNombres\": \"Cliente10 Modificado\",\r\n    \"clEdad\": 28,\r\n    \"clFechaNacimiento\": \"1994-05-05\",\r\n    \"clApellidos\": \" Apellido10\",\r\n    \"clDireccion\": \"Direccion10\",\r\n    \"clTelefono\": \"0995691211\",\r\n    \"clEstadoCivil\": 3,\r\n    \"clIdentificacionConyugue\": \"0604434570\",\r\n    \"clNombreConyugue\": \"Conyugue10\",\r\n    \"clSujetoCredito\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Clientes/Cliente/0604434970",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Clientes",
+								"Cliente",
+								"0604434970"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/Clientes/Cliente/0604434970",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Clientes",
+								"Cliente",
+								"0604434970"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clIdentificacion\": \"0604434570\",\r\n    \"clNombres\": \"Cliente10 Modificado\",\r\n    \"clEdad\": 28,\r\n    \"clFechaNacimiento\": \"1994-05-05\",\r\n    \"clApellidos\": \" Apellido10\",\r\n    \"clDireccion\": \"Direccion10\",\r\n    \"clTelefono\": \"0995691211\",\r\n    \"clEstadoCivil\": 3,\r\n    \"clIdentificacionConyugue\": \"0604434570\",\r\n    \"clNombreConyugue\": \"Conyugue10\",\r\n    \"clSujetoCredito\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Clientes/Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Clientes",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Clientes/Cliente/0604434570",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Clientes",
+								"Cliente",
+								"0604434570"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patio Autos",
+			"item": [
+				{
+					"name": "Patios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/PatioAutos/PatioAutos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAutos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"paId\": 2,\r\n        \"paNombre\": \"Patio dos Modificado\",\r\n        \"paDireccion\": \"Solca\",\r\n        \"paTelefono\": \"0912123456\",\r\n        \"paNumeroVenta\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/PatioAutos/PatioAutos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAutos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/PatioAutos/PatioAutos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAutos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"paNombre\": \"Patio tres\",\r\n        \"paDireccion\": \"Quito\",\r\n        \"paTelefono\": \"0912123456\",\r\n        \"paNumeroVenta\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/PatioAutos/PatioAuto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAuto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/PatioAutos/PatioAuto/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"PatioAutos",
+								"PatioAuto",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ejecutivos",
+			"item": [
+				{
+					"name": "Ejecutivos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/Ejecutivos/Ejecutivos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Ejecutivos",
+								"Ejecutivos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ejecutivo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/Ejecutivos/Ejecutivo/0604434570",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Ejecutivos",
+								"Ejecutivo",
+								"0604434570"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marcas",
+			"item": [
+				{
+					"name": "Marca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/Marcas/Marcas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Marcas",
+								"Marcas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehiculos",
+			"item": [
+				{
+					"name": "Vehiculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:64393/api/Vehiculos/Vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Vehiculos",
+								"Vehiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehiculo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:64393/api/Vehiculos/Vehiculo/Basico",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "64393",
+							"path": [
+								"api",
+								"Vehiculos",
+								"Vehiculo",
+								"Basico"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MethodBoundaryAspect.Fody" Version="2.0.145" />
+    <PackageReference Include="Z.EntityFramework.Extensions.EFCore" Version="5.13.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\nombremicroservicio.Domain\nombremicroservicio.Domain.csproj" />
+    <ProjectReference Include="..\nombremicroservicio.Repository\nombremicroservicio.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
